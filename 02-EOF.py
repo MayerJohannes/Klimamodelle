@@ -123,6 +123,7 @@ for _,ds_test in iData_anom_norm_roll.groupby("time0.dayofyear"):
 			iris_prmsl_td = td.PRMSL_GDS0_MSL.to_iris()
 			iris_rh_td = td.RH_GDS0_ISBL.to_iris()
 
+			# Compute Pseudo-PCs
 			ppc = msolver.projectField([iris_prmsl_td,iris_rh_td,iris_spfh_td],neofs=neigs)
 
 			# Compute norm
